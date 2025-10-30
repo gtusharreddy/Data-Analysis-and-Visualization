@@ -1,0 +1,41 @@
+Cleaned Column Names: ['FundNumber', 'MarketCap', 'Type', 'Risk', 'Assets', 'TurnoverRatio(%)', 'SD', 'SharpeRatio', '1YrReturn%', '3YrReturn%', '5YrReturn%', '10YrReturn%', 'ExpenseRatio', 'StarRating']
+
+Sample Data:
+  FundNumber MarketCap    Type     Risk    Assets  TurnoverRatio(%)     SD  \
+0      RF040     Large  Growth  Average   8524.94             112.0   9.51   
+1      RF147     Large   Value  Average    942.15              26.0  10.41   
+2      RF221   Mid-Cap  Growth     High    374.63              63.4  15.24   
+3      RF309   Mid-Cap   Value  Average   1478.08               6.0   9.51   
+4      RF028     Large  Growth  Average  13634.38               5.0  10.93   
+
+   SharpeRatio  1YrReturn%  3YrReturn%  5YrReturn%  10YrReturn%  ExpenseRatio  \
+0         1.91       11.08       19.29       17.00         8.82          0.82   
+1         1.88       11.89       18.20       14.60         9.26          0.95   
+2         1.88       -4.34       12.63       13.02        12.98          1.35   
+3         1.86        7.95       16.48       15.15         7.40          0.69   
+4         1.85       11.52       21.55       19.59         8.83          1.15   
+
+  StarRating  
+0       Four  
+1       Four  
+2      Three  
+3        Two  
+4       Four  
+
+  Ideal Combination for Highest 3-Year Return:
+MarketCap      Large
+Type          Growth
+Risk            High
+3YrReturn%    17.595
+Name: 1, dtype: object
+
+1-Year Return Prediction - Test R2: 0.5713, MAE: 2.4148
+
+  Optimal Sharpe Ratio to maximize 1-Year Return: 1.7963
+Predicted 1-Year Return at optimal Sharpe: 18.3409%
+
+  Analysis Summary:
+- Best MarketCap|Type|Risk combination (3YrReturn): Large | Growth | High
+- Predicted 3YrReturn: 17.59%
+- Optimal Sharpe Ratio to maximize 1YrReturn: 1.7963
+- Predicted 1YrReturn at optimal Sharpe: 18.34%
